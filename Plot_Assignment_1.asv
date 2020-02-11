@@ -1,0 +1,23 @@
+%Plotting assingment 1
+
+simout = load('assignment1_reg_test');
+
+fig1 = figure
+plot(simout.ans(1,:), simout.ans(2,:)*180/pi)
+hold on
+plot(simout.ans(1,:), simout.ans(4,:)*180/pi)
+hold off
+legend('Reference', 'Pitch')
+xlabel('Time[s]')
+ylabel('Angl')
+set(gcf,'Position',[150, 350, 809, 500])
+grid
+
+fig2 = figure
+plot(simout.ans(1,:), simout.ans(3,:)*180/pi)
+hold on
+plot(simout.ans(1,:), simout.ans(5,:)*180/pi)
+hold off
+legend('Reference', 'Elevation')
+set(gcf,'Position',[150*7, 350, 809, 500])
+grid
